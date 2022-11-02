@@ -1,0 +1,21 @@
+{
+  "name": "post-message",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install:parent": "cd parent && npm install",
+    "install:child": "cd child && npm install",
+    "install": "npm run install:parent && npm run install:child",
+    "start:parent": "cd parent && npm start",
+    "start:child": "cd child && npm start",
+    "start": "concurrently \"npm run start:parent\" \"npm run start:child\""
+  },
+  "keywords": [],
+  "author": "Michael",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.5.0"
+  }
+}
